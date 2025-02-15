@@ -1,0 +1,11 @@
+CartesianController:
+    type: "franka_iitgn/CartesianController"
+    arm_id: $(arg arm_id)
+
+CartesianControllerBack:
+    type: "franka_iitgn/CartesianControllerBack"
+    arm_id: $(arg arm_id)
+
+CartesianControllerFront:
+    type: "franka_iitgn/CartesianControllerFront"
+    arm_id: $(arg arm_id)

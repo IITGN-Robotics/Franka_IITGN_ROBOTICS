@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>franka_iitgn</name>
+  <version>0.0.1</version>
+  <description>Custom Franka controller for IITGN.</description>
+
+  <maintainer email="iitgn-robotics@todo.todo">iitgn-robotics</maintainer>
+  <license>BSD</license>
+
+  <!-- Build Tools -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Minimal Build Dependencies -->
+  <build_depend>roscpp</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>controller_interface</build_depend>
+  <build_depend>franka_hw</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <!-- Additional dependencies if your code uses them -->
+  <!-- <build_depend>eigen_conversions</build_depend> -->
+  <!-- <build_depend>geometry_msgs</build_depend> -->
+  <!-- <build_depend>tf</build_depend> -->
+  <!-- <build_depend>tf_conversions</build_depend> -->
+
+  <!-- Runtime Dependencies -->
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>controller_interface</exec_depend>
+  <exec_depend>franka_hw</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>actionlib</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+
+  
+  <!-- Export the plugin description for controller_manager -->
+  <export>
+    <controller_interface plugin="${prefix}/config/franka_iitgn_plugin.xml" />
+  </export>
+</package>

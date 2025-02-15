@@ -1,0 +1,29 @@
+<library path="lib/libfranka_iitgn">
+  <class name="franka_iitgn/CartesianController"
+         type="franka_iitgn::CartesianController"
+         base_class_type="controller_interface::ControllerBase">
+    <description>
+      A custom Cartesian pose controller for the Franka robot.
+    </description>
+  </class>
+</library>
+
+<library path="lib/libfranka_iitgn">
+  <class name="franka_iitgn/CartesianControllerFront"
+         type="franka_iitgn::CartesianControllerFront"
+         base_class_type="controller_interface::ControllerBase">
+    <description>
+      A custom Cartesian controller for the Franka robot.
+    </description>
+  </class>
+</library>
+
+<library path="lib/libfranka_iitgn">
+  <class name="franka_iitgn/CartesianControllerBack"
+         type="franka_iitgn::CartesianControllerBack"
+         base_class_type="controller_interface::ControllerBase">
+    <description>
+      A Cartesian pose controller for the Franka robot.
+    </description>
+  </class>
+</library>

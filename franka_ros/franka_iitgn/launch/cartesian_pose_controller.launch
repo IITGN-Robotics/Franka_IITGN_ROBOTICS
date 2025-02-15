@@ -1,0 +1,26 @@
+<launch>
+
+  <arg name="robot_ip" default="192.168.1.11" />
+  <arg name="load_gripper" default="true" />
+  <arg name="robot" default="fr3" />
+  <arg name="arm_id" default="$(arg robot)" />
+
+  <param name="robot_ip" value="$(arg robot_ip)" />
+  <param name="load_gripper" value="$(arg load_gripper)" />
+  <param name="robot" value="$(arg robot)" />
+
+  <include file="$(find franka_control)/launch/franka_control.launch" pass_all_args="true"/>
+
+  <rosparam command="load" file="$(find franka_iitgn)/config/franka_iitgn.yaml" subst_value="true" />
+
+  <!-- Spawn your custom controller -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="CartesianController"/>
+
+  <!-- Launch RViz -->
+  <node pkg="rviz" type="rviz" output="screen" name="rviz" 
+        args="-d $(find franka_iitgn)/launch/robot.rviz -f $(arg robot)_link0 --splash-screen $(find franka_visualization)/splash.png"/>
+
+  <!-- Launch the Joint State Logger node -->
+  <node name="joint_state_logger" pkg="franka_iitgn" type="joint_state_logger.py" output="screen"/>
+
+</launch>
