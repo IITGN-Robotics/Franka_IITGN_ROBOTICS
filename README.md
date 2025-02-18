@@ -135,7 +135,7 @@ To teleoperate the Franka robot:
 2. In another terminal, launch the teleoperation node:
 
    ```bash
-   roslaunch joyfranka_control teleop_franka.launch
+   roslaunch joy_franka_control teleop_franka.launch
    ```
 
 3. Hold the **L2 button** on the joystick to enable translation and use the joystick to move the robot.
