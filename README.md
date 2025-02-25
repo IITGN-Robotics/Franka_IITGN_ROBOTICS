@@ -1,8 +1,4 @@
-Here's a complete and well-structured README file based on the instructions you provided:
-
----
-
-# Franka ROS Control and Trajectory Commands
+#Franka ROS Control, IITGN Robotics Lab
 
 This repository contains ROS commands and scripts for controlling the Franka Emika Panda robot. The following sections outline the installation guide, robot setup, and various control commands for trajectory planning, gripper control, and more.
 
